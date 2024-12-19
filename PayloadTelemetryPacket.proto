@@ -23,6 +23,7 @@ message PayloadTelemetryPacket {
 
   // Calculated Values
   float altitude = 13;
+  float initialAltitude = 55;
   float magX = 14;
   float magY = 15;
   float magZ = 16;
@@ -44,9 +45,6 @@ message PayloadTelemetryPacket {
   float gpsLong = 28;
   float gpsAltMSL = 29;
   float gpsAltAGL = 30;
-  int32 gpsVelocityN = 31;
-  int32 gpsVelocityE = 32;
-  int32 gpsVelocityD = 33;
   uint32 epochTime = 34;
   uint32 satellites = 35;
   bool gpsLock = 36;
