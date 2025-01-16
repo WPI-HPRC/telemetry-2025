@@ -59,6 +59,8 @@ message RocketTelemetryPacket {
   uint32 satellites = 36; // uint8_t
   bool gpsLock = 37;
 
+  int32 sdFileNo = 47;
+
   uint32 loopCount = 38;
   uint32 timestamp = 39;
 
