@@ -1,0 +1,28 @@
+syntax = "proto3";
+package HPRC.Command;
+
+message SetFlightMode {
+  bool flightModeOn = 1;
+}
+
+message SetVideoActive {
+  bool videoActive = 1;
+}
+
+message ClearSD {}
+
+message ReadSDDirectory {}
+
+message ReadSDFile {
+  string filename = 1;
+}
+
+message Message {
+  oneof Message {
+    SetFlightMode setFlightMode = 1;
+    SetVideoActive setVideoActive = 2;
+    ClearSD clearSD = 3;
+    ReadSDDirectory readSDDirectory = 4;
+    ReadSDFile readSDFile =  5;
+  }
+}

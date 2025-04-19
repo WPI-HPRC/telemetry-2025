@@ -1,0 +1,12 @@
+syntax = "proto3";
+import "telemetry/RocketTelemetryPacket.proto";
+import "telemetry/PayloadTelemetryPacket.proto";
+
+package HPRC.Telemetry;
+
+message Message {
+  oneof Message {
+    PayloadTelemetryPacket payloadPacket = 1;
+    RocketTelemetryPacket rocketPacket = 2;
+  }
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "telemetry/Telemetry.proto";
+import "telemetry/Command.proto";
+import "telemetry/CommandResponse.proto"
+
+package HPRC;
+
+message Packet {
+  oneof Data {
+    Telemetry.Message telemetry = 1;
+    Command.Message command = 2;
+    CommandResponse.Message commandResponse = 3;
+  }
+}
