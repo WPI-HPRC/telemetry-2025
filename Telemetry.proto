@@ -1,6 +1,6 @@
 syntax = "proto3";
-import "telemetry/RocketTelemetryPacket.proto";
-import "telemetry/PayloadTelemetryPacket.proto";
+import "RocketTelemetryPacket.proto";
+import "PayloadTelemetryPacket.proto";
 
 package HPRC.Telemetry;
 
