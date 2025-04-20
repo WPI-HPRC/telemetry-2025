@@ -17,10 +17,10 @@ message EndPacketChunks {
 }
 
 message Packet {
-  oneof Data {
-    Telemetry.Message telemetry = 1;
-    Command.Message command = 2;
-    CommandResponse.Message commandResponse = 3;
+  oneof Message {
+    Telemetry telemetry = 1;
+    Command command = 2;
+    CommandResponse commandResponse = 3;
     BeginPacketChunks beginPacketChunks = 4;
     EndPacketChunks endPacketChunks = 5;
   }

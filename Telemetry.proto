@@ -2,9 +2,9 @@ syntax = "proto3";
 import "RocketTelemetryPacket.proto";
 import "PayloadTelemetryPacket.proto";
 
-package HPRC.Telemetry;
+package HPRC;
 
-message Message {
+message Telemetry {
   oneof Message {
     PayloadTelemetryPacket payloadPacket = 1;
     RocketTelemetryPacket rocketPacket = 2;

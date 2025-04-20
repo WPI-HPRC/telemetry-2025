@@ -1,27 +1,27 @@
 syntax = "proto3";
-package HPRC.Command;
+package HPRC;
 
-message ActuateAirbrakes {
-  int32 servoValue = 1;
-}
+message Command {
+  message ActuateAirbrakes {
+    int32 servoValue = 1;
+  }
 
-message SetFlightMode {
-  bool flightModeOn = 1;
-}
+  message SetFlightMode {
+    bool flightModeOn = 1;
+  }
 
-message SetVideoActive {
-  bool videoActive = 1;
-}
+  message SetVideoActive {
+    bool videoActive = 1;
+  }
 
-message ClearSD {}
+  message ClearSD {}
 
-message ReadSDDirectory {}
+  message ReadSDDirectory {}
 
-message ReadSDFile {
-  string filename = 1;
-}
+  message ReadSDFile {
+    string filename = 1;
+  }
 
-message Message {
   oneof Message {
     ActuateAirbrakes actuateAirbrakes = 1;
     SetFlightMode setFlightMode = 2;
