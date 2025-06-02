@@ -20,6 +20,10 @@ message Command {
 
   message ReadSDDirectory {}
 
+  message SetAcksEnabled {
+    bool acksEnabled = 1;
+  }
+
   message ReadSDFile {
     string filename = 1;
   }
@@ -32,5 +36,6 @@ message Command {
     ReadSDDirectory readSDDirectory = 5;
     ReadSDFile readSDFile =  6;
     PowerCycle powerCycle = 7;
+    SetAcksEnabled setAcksEnabled = 8;
   }
 }
