@@ -14,6 +14,8 @@ message Command {
     bool videoActive = 1;
   }
 
+  message PowerCycle {}
+
   message ClearSD {}
 
   message ReadSDDirectory {}
@@ -29,5 +31,6 @@ message Command {
     ClearSD clearSD = 4;
     ReadSDDirectory readSDDirectory = 5;
     ReadSDFile readSDFile =  6;
+    PowerCycle powerCycle = 7;
   }
 }
